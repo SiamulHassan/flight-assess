@@ -5,10 +5,11 @@ import img from "../images/output.png";
 import SelectTrip from "./components/SelectTrip";
 import HorizontalBorder from "./components/HorizontalBorder";
 import FlightForm from "./components/FlightForm";
+import FlightTable from "./components/FlightTable";
 
 function App() {
   // const parsed = JSON.parse(fakeData);
-  console.log(fakeData.flightOffer);
+  // console.log(fakeData.flightOffer);
   return (
     <>
       <div className="shadow-md">
@@ -24,6 +25,8 @@ function App() {
           <HorizontalBorder color="#2e3791" />
         </div>
         <p className="mt-2">data parsed successfully</p>
+        <br />
+        <FlightTable />
         <br />
         <img src={img} alt="img" />;
       </Container>

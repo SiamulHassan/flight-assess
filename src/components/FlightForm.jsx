@@ -1,4 +1,5 @@
 // import React from "react";
+import Button from "./Button";
 import HorizontalBorder from "./HorizontalBorder";
 import Input from "./Input";
 import SelectBox from "./SelectBox";
@@ -68,9 +69,7 @@ const FlightForm = () => {
           </div>
         </div>
         <div className="search btn">
-          <button className="bg-[#2e3791] text-white py-2 px-6 rounded-sm">
-            Submit
-          </button>
+          <Button>Submit</Button>
         </div>
       </div>
     </form>
