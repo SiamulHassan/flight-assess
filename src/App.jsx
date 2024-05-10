@@ -6,6 +6,7 @@ import SelectTrip from "./components/SelectTrip";
 import HorizontalBorder from "./components/HorizontalBorder";
 import FlightForm from "./components/FlightForm";
 import FlightTable from "./components/FlightTable";
+import NavBar from "./components/NavBar";
 
 function App() {
   // const parsed = JSON.parse(fakeData);
@@ -13,6 +14,11 @@ function App() {
   return (
     <>
       <div className="shadow-md">
+        <div className="bg-[#1f2937] py-6">
+          <Container>
+            <NavBar />
+          </Container>
+        </div>
         <Container>
           <Header />
         </Container>
