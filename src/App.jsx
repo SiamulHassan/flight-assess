@@ -24,16 +24,13 @@ function App() {
       </div>
       <Container>
         <SelectTrip />
-        <div>
-          <HorizontalBorder color="#2e3791" />
-          <FlightForm setHasSearchedFlight={setHasSearchedFlight} />
-          <HorizontalBorder color="#2e3791" />
-        </div>
-        {hasSearchedFlight && <p className="mt-2">data parsed successfully</p>}
+        <HorizontalBorder color="#2e3791" />
+        <FlightForm setHasSearchedFlight={setHasSearchedFlight} />
+        <HorizontalBorder color="#2e3791" />
+        {hasSearchedFlight && <p className="mt-2">{fakeData.message}</p>}
         <div className="mb-7">
           {hasSearchedFlight && <FlightTable fakeData={fakeData} />}
         </div>
-        {/* <FlightTable fakeData={fakeData} /> */}
       </Container>
     </>
   );

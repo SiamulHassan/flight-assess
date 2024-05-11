@@ -1,7 +1,7 @@
 import { createContext, useContext } from "react";
 
-// import React from 'react'
 const TableContext = createContext();
+
 const Table = ({ cols, children }) => {
   return (
     <TableContext.Provider value={{ cols }}>
@@ -16,6 +16,7 @@ function Header({ children }) {
   const gridCol = {
     gridTemplateColumns: cols,
   };
+
   return (
     <header
       role="row"
@@ -29,6 +30,7 @@ function Header({ children }) {
 
 function Row({ children, isEven }) {
   const { cols } = useContext(TableContext);
+
   const gridCol = {
     gridTemplateColumns: cols,
   };
@@ -47,4 +49,5 @@ function Row({ children, isEven }) {
 }
 Table.Header = Header;
 Table.Row = Row;
+
 export default Table;
