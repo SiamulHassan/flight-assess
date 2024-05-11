@@ -3,3 +3,4 @@ const HorizontalBorder = ({ color }) => {
 };
 
 export default HorizontalBorder;
+// border border-y-orange-700

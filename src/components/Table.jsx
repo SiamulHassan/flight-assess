@@ -38,7 +38,7 @@ function Row({ children, isEven }) {
     <div
       role="row"
       className={`grid items-center px-6 py-1 text-[#7e7a7a] text-sm ${
-        isEven ? "bg-[#f7f7f7]" : "bg-[#e5e7eb]"
+        isEven ? "bg-[#f7f7f7]" : "bg-[#e5e7eb] border border-y-orange-700"
       }`}
       style={gridCol}
     >

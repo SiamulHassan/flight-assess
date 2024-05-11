@@ -1,15 +1,17 @@
 import Container from "./components/Container";
 import Header from "./components/Header";
-import img from "../images/output.png";
 import SelectTrip from "./components/SelectTrip";
 import HorizontalBorder from "./components/HorizontalBorder";
 import FlightForm from "./components/FlightForm";
 import FlightTable from "./components/FlightTable";
 import NavBar from "./components/NavBar";
+import { useState } from "react";
+import fakeData from "../data/data.json";
 
 function App() {
   // const parsed = JSON.parse(fakeData);
-
+  const [hasSearchedFlight, setHasSearchedFlight] = useState(false);
+  console.log(hasSearchedFlight);
   return (
     <>
       <div className="shadow-md">
@@ -26,11 +28,13 @@ function App() {
         <SelectTrip />
         <div>
           <HorizontalBorder color="#2e3791" />
-          <FlightForm />
+          <FlightForm setHasSearchedFlight={setHasSearchedFlight} />
           <HorizontalBorder color="#2e3791" />
         </div>
-        <p className="mt-2">data parsed successfully</p>
-        <FlightTable />
+        {hasSearchedFlight && <p className="mt-2">data parsed successfully</p>}
+        <div className="mb-7">
+          {hasSearchedFlight && <FlightTable fakeData={fakeData} />}
+        </div>
       </Container>
     </>
   );

@@ -1,10 +1,9 @@
 // import React from 'react'
 import Button from "./Button";
 import Table from "./Table";
-import fakeData from "../../data/data.json";
+
 // import FlightColumn from "./FlightColumn";
-const FlightTable = () => {
-  //   console.log(fakeData.flightOffer);
+const FlightTable = ({ fakeData: { flightOffer } }) => {
   // const mySlice = fakeData.flightOffer.slice(0, 2);
   // console.log(mySlice);
   const handleSelect = () => {};
@@ -22,7 +21,7 @@ const FlightTable = () => {
         <div>Price</div>
       </Table.Header>
       <div>
-        {fakeData.flightOffer.map((flightOffer, index) => (
+        {flightOffer.map((flightOffer, index) => (
           <Table.Row key={index} isEven={index % 2 === 0}>
             <div>
               {flightOffer.itineraries.map((segment) =>
@@ -93,7 +92,7 @@ const FlightTable = () => {
                 <span key={index}>{segment.duration}</span>
               ))}
             </div>
-            <div>
+            <div className="flex items-center flex-col">
               {<span key={index}>{flightOffer.price}</span>}
               <div>
                 <Button onClick={handleSelect}>Select</Button>
