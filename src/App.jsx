@@ -1,17 +1,15 @@
-import Container from "./components/Container";
-import Header from "./components/Header";
-import SelectTrip from "./components/SelectTrip";
-import HorizontalBorder from "./components/HorizontalBorder";
-import FlightForm from "./components/FlightForm";
-import FlightTable from "./components/FlightTable";
-import NavBar from "./components/NavBar";
+import Container from "./ui/Container";
+import Header from "./ui/Header";
+import SelectTrip from "./ui/SelectTrip";
+import HorizontalBorder from "./ui/HorizontalBorder";
+import FlightForm from "./Features/FindFlight/FlightForm";
+import FlightTable from "./Features/FindFlight/FlightTable";
+import NavBar from "./ui/NavBar";
 import { useState } from "react";
 import fakeData from "../data/data.json";
 
 function App() {
-  // const parsed = JSON.parse(fakeData);
   const [hasSearchedFlight, setHasSearchedFlight] = useState(false);
-  console.log(hasSearchedFlight);
   return (
     <>
       <div className="shadow-md">
@@ -35,6 +33,7 @@ function App() {
         <div className="mb-7">
           {hasSearchedFlight && <FlightTable fakeData={fakeData} />}
         </div>
+        {/* <FlightTable fakeData={fakeData} /> */}
       </Container>
     </>
   );

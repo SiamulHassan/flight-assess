@@ -1,13 +1,11 @@
-// import React from "react";
 import { useEffect, useState } from "react";
-import Button from "./Button";
-import HorizontalBorder from "./HorizontalBorder";
-import Input from "./Input";
-import SelectBox from "./SelectBox";
+import Button from "../../ui/Button";
+import HorizontalBorder from "../../ui/HorizontalBorder";
+import Input from "../../ui/Input";
+import SelectBox from "../../ui/SelectBox";
 import { HiOutlinePlusSm } from "react-icons/hi";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import fakeData from "../../data/data.json";
 const dayFrom = [
   { value: "1", label: "Day- 1" },
   { value: "2", label: "Day- 2" },
@@ -67,10 +65,11 @@ const FlightForm = ({ setHasSearchedFlight }) => {
     setFormErrors(errors);
     if (Object.keys(errors).length === 0) {
       // Form is valid, proceed with submission
-      // pass the fake dummy data form here
+      // pass the fake dummy data form here or returning true
       setHasSearchedFlight(true);
     }
   };
+
   useEffect(() => {
     const errorMessage = Object.keys(formErrors)
       .map((key) => `${key} ${formErrors[key]}`)

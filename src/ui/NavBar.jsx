@@ -1,5 +1,5 @@
 import { IoIosNotificationsOutline } from "react-icons/io";
-import profile from "../../images/program61.png";
+import profile from "../../images/output.png";
 const NavBar = () => {
   return (
     <nav className="flex text-[#c5cac9] justify-between items-center">
