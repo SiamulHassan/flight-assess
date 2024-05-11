@@ -28,7 +28,7 @@ function Header({ children }) {
   );
 }
 
-function Row({ children }) {
+function Row({ children, isEven }) {
   const { cols } = useContext(TableContext);
   const gridCol = {
     gridTemplateColumns: cols,
@@ -37,7 +37,9 @@ function Row({ children }) {
   return (
     <div
       role="row"
-      className="grid items-center px-6 py-1 bg-[#f3f4f6] text-[#7e7a7a] text-sm"
+      className={`grid items-center px-6 py-1 text-[#7e7a7a] text-sm ${
+        isEven ? "bg-[#f7f7f7]" : "bg-[#e5e7eb]"
+      }`}
       style={gridCol}
     >
       {children}
