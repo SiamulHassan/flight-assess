@@ -1,8 +1,31 @@
-# React + Vite
+# Flight Project (Assessment)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+I have completed this project within 14 hours.
 
-Currently, two official plugins are available:
+## How to run this project on local machine
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Clone this project
+- Go to project folder and open it with a code editor
+- run command : npm install (this will download the dependencies)
+- After downloading the dependencies run command 'npm run dev'
+- It will give us a local port number
+- Ctrl + click the port to open this project on your local machine
+
+## Best practices I have implimented
+
+- Used reusable components
+- Organized Folder Structure
+- Followed DRY principles
+- Used Compound Composition Pattern for creating highly reusable components
+- Used React.js performance optimization techniques
+- Wrote some code documentation for better code understing
+
+# Two Live Frontend Projects
+
+### Chatting App
+
+https://courageous-biscochitos-2d5361.netlify.app
+
+### Hotel Management
+
+https://animated-cajeta-5d3357.netlify.app
